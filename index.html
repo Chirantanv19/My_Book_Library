@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Book Library</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for styling -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bk">
+</div>
+
+    <nav>
+        <h1>My Book Library</h1>
+        <ul>
+            <li><a href="#" id="search-link">Search Books</a></li>
+            <li><a href="#" id="reading-list-link">My Reading List</a></li>
+        </ul>
+    </nav>
+
+    <main id="search-section" class="before-search">
+        <section class="search-container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for books...">
+                <button id="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations">
+            <h2>Recommended Books</h2>
+            <div id="recommended-books"></div>
+        </section>
+
+        <!-- Search Results Section -->
+        <section id="results" style="display: none;">
+            <!-- Search results will be displayed here -->
+        </section>
+    </main>
+
+    <main id="reading-list-section" style="display: none;">
+        <h2>My Reading List</h2>
+        <section id="reading-list"></section>
+    </main>
+
+    <!-- Modal for book details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

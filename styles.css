@@ -1,0 +1,285 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  
+.bk{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:100%;
+
+    background-image: url(1326368.png);
+    /* opacity: 60%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+   z-index: -1;
+    filter: blur(3px);
+}
+
+
+nav {
+    background-image: url(bk.jpg);
+    opacity: 90%;
+    color: rgb(234, 174, 90);
+    border-radius: 8px;
+    padding: 15px;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}
+
+nav h1 {
+    display: inline-block;
+    margin: 0;
+    color: rgb(234, 174, 90);
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    /* float: right; */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(234, 174, 90);
+
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Sections */
+#search-section {
+    transition: all 0.3s ease;
+
+}
+
+#search-section.before-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 70px); /* Adjusted for navbar height */
+}
+
+#search-section.after-search {
+    display: block;
+    padding-top: 80px; /* Add top padding after search */
+}
+
+/* Search Bar */
+.search-container {
+    width: 100%;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.before-search .search-bar {
+    margin: 100px; 
+
+
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(234, 174, 90);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+.search-bar button:hover {
+    /* background-color: rgb(60, 60, 60); */
+    background-color: rgb(234, 174, 90);
+
+}
+
+/* Recommendations Section */
+#recommendations {
+    margin: 40px 0;
+}
+
+#recommendations h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(234, 174, 90);
+
+}
+
+#recommended-books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Results and Reading List Sections */
+#results, #reading-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Book Cards */
+.book-card {
+    background-image: url(bk.jpg);
+    opacity: 85%;
+    
+    /* background-repeat: no-repeat;
+    background-attachment: fixed; */
+    width: 200px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    color: rgb(234, 174, 90);
+
+}
+
+.book-card p {
+    font-size: 14px;
+    /* color: #555;
+     */
+    color: rgb(234, 174, 90);
+}
+
+.book-card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    /* background-color: gray; */
+    background-color: rgb(234, 174, 90);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.book-card button:hover {
+    background-color: #3f3f3f;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-image: url(bk.jpg);
+    color: rgb(234, 174, 90);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#close-modal {
+    /* color: #aaa;
+     */
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+    color: black;
+}
+
+#modal-body h2 {
+    margin-top: 0;
+}
+
+#modal-body img {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+}
+
+#modal-body p {
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .search-bar input {
+        width: 80%;
+    }
+
+    .book-card {
+        width: 100%;
+    }
+
+    #modal-body img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    #search-section.before-search {
+        min-height: calc(100vh - 60px);
+    }
+}
